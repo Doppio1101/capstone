@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>게시글 수정</title>
+  </head>
+  <body>
+
+
+
+  <h3>게시글 수정</h3>
+  <fieldset>
+
+  <legend>HTML글 수정</legend>
+  <form  action="javascript:Rewrite()" method="get">
+  <p>제목</p><br>
+  <input type="text" id="tit" name="boardname" placeholder="제목을 작성해 주세요." size="80" maxlength="100" value="HTML"><br>
+  <p>내용</p>
+  <style>
+    textarea{resize:none;}
+  </style>
+  <textarea name="board" id="col" rows="8" cols="80" maxlength="300" >
+Hypertext Markup Language
+웹 문서를 만들기 위하여 사용하는 기본적인 웹 언어의 한 종류이다. 하이퍼텍스트를 작성하기 위해 개발되었다.
+
+  </textarea><br>
+  <span>첨부파일:<input id="chumbu" type="file" name="chumbu"></span><br>
+  <input type="button" name="recheck" value="확인" onclick="test()">
+
+  <input type="button" name="recheck" value="수정" onclick="Recheck()">
+  <a href="board.html"><input type="button" name="cancel" value="취소"></a>
+
+
+  </form>
+  </fieldset>
+
+  </body>
+  <script src="search.js" charset="utf-8"></script>
+</html>

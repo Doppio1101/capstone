@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML</title>
+  </head>
+  <body>
+  <h3>HTML</h3>
+  <fieldset>
+    <form action="javascript:Rewrite()" method="post">
+
+
+  <label>제목
+  <input type="text" name="htmlname" id="tit" placeholder="제목을 작성해 주세요." size="80" value="HTML" disabled></label><br>
+  <input id="Writer" type="hidden" name="Writer" value="장정훈">
+  <input id="hid" type="hidden" name="number" value="1">
+  <p>내용</p>
+  <style>
+    textarea{resize:none;}
+  </style>
+  <textarea name="board" id="col" rows="8" cols="80" maxlength="300" disabled>
+Hypertext Markup Language
+웹 문서를 만들기 위하여 사용하는 기본적인 웹 언어의 한 종류이다. 하이퍼텍스트를 작성하기 위해 개발되었다.
+  </textarea><br>
+  <input id="Reader" type="hidden" name="Reader" value="장정훈">
+  <span>첨부파일:소스 코드.png</span><br>
+  <style media="screen">
+    #rewrite{float: right;
+            }
+  </style>
+  <a href="board.html"><input id = "list" type="button" name="list" value="목록"></a>
+  <input id = "delete" type="button" name="delete" value="삭제" onclick="Delete()">
+  <a href="./kakao_login_small.png" download> <input type="button" value="다운로드"></a>
+  <input id = "rewrite" type="button" name="rewrite" value="수정" onclick="Rewrite()">
+
+  <br>  <input type="button" name="comment" value="댓글">
+  <br> <a href="mailto:chlj1101@naver.com">chlj1101@nvaer.com</a>
+  <br>  <a href="./kakao_login_small.png" download>테스트</a>
+
+
+  <div class="commend_cnt">
+   댓글갯수
+      <p>사용자: ${user}</p>
+</div>
+<div>
+   <form action="comment">
+      <style media="screen">
+        #comment{width: 70%;}
+      </style>
+      댓글 입력<input id="comment" type="text" name="content">
+      <input type="hidden" name="cnt" value="${membernote.cnt}">
+      <input type="hidden" name="id" value="${user}">
+      <button type="submit">등록</button>
+   </form>
+
+</div>
+<br>
+<div>
+<c:forEach items="${comment}" var="com">
+  <style media="screen">
+    
+  </style>
+  <fieldset id="commetfield">
+    <legend>${com.id}</legend>
+   <table border="0">
+
+
+
+         <td>${com.content}</td>
+         <td>
+
+       <form action="deletecomment">
+         <style media="screen">
+           #comdel{float: right;}
+         </style>
+       <input type="hidden" name="cnt" value="${com.cnt}">
+
+       <input type="hidden" name="ucnt" value="${com.ucnt}">
+
+       <input type="hidden" name="id" value="${com.id}">
+       <input id="comdel" type="submit" value="삭제">
+       </form>
+         </td>
+
+
+   </table>
+ </fieldset>
+   </c:forEach>
+</div>
+  </form>
+  </fieldset>
+  </body>
+  <script src="search.js" charset="utf-8"></script>
+</html>

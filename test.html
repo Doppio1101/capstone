@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>이미지 버튼</title>
+<style>
+table {
+	border: 0;
+}
+td {
+	padding: 5px 10px;
+	border: 0;
+	vertical-align: middle;
+}
+</style>
+<!-- 추가 부분 시작 -->
+<script>
+	function local() {
+		var id = document.getElementById("id").value;
+		var pwd = document.getElementById("pwd").value;
+
+		alert("아이디:" + id + ", 비밀번호: " + pwd);
+	}
+</script>
+<!-- 추가 부분 종료 -->
+
+    <!-- action 속성 추가 -->
+	<form action="javascript:local();">
+		<table>
+			<tr>
+				<input type="button" name="logout" value="로그아웃" onclick="Logout()">
+				<td><label>아이디: <input type="text" size="15" id="id"></label></td>
+				<td><label>비밀번호: <input type="password" size="15" id="pwd"></label></td>
+				<td><input type="image" id="butt" src="kakao_login_small.png" alt="login"></td>
+			</tr>
+		</table>
+	</form>
+
+​
+
+<textarea id="board" rows="8" cols="80" id="textAreaId" name="textAreaName"></textarea><br/>
+
+<span style="color:#aaa;" id="counter">(0 / 최대 500자)</span>
+
+</head>
+
+	<body>
+		<form METHOD=POST name="sms">
+  		<textarea NAME="txta" ROWS="8" COLS="80" onkeyup="fc_chk_byte(this, 300)"></textarea>
+  		<br>
+			<input type="range" min="0" max="10"><br>
+			<input type="submit" id="tttt" onclick="Select()"><br>
+			<select class="t1" id="t1" name="t1">
+				<option value="test1" id="test1">테스트 111</option>
+				<option value="test2" id="test2">테스트 222</option>
+				<option value="test3" id="test3">테스트 333</option>
+			</select>
+			<br>
+			<header>
+				<input type="text" name="" value="ttt1">
+				<input type="text" name="" value="ttt2">
+			</header>
+  		<input type="text" size="2" name="char_byte" id="char_byte" readonly> / 80 byte
+  		<input type="button" value="send" onclick="alert(document.sms.txta.value)" />
+			<script src="search.js" charset="utf-8"> </script>
+		</form>
+
+	</body>
+
+</html>

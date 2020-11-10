@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>게시글 작성</title>
+  </head>
+  <body>
+  <h3>자유게시판</h3>
+  <fieldset>
+  <legend>새 글 작성</legend>
+  <p>제목</p><br>
+  <input type="text" name="boardname" placeholder="제목을 작성해 주세요." size="80" maxlength="100"><br>
+  <p>내용</p>
+  <form METHOD=post name="sms">
+  <style>
+    textarea{resize:none;}
+  </style>
+  <textarea id="board"  name="txta" rows="12" cols="52" maxlength="300" placeholder="최대 300자까지 입력 가능합니다." onkeyup="fc_chk_byte(this, 80)"></textarea><br>
+  <input type="text" size="2" name="char_byte" id="char_byte" readonly> / 80 byte <br>
+  </form>
+  <span>첨부파일:<input type="file" name="" value="파일 찾기"></span><br>
+  <a href="board.html"><input type="button" name="check" value="등록"></a>
+  </fieldset>
+  </body>
+  <script src="search.js" charset="utf-8"></script>
+</html>

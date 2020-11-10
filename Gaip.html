@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>회원가입</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>회원가입</legend>
+      <input type="id" name="id" placeholder="아이디" id="id" autofocus required ><br>
+      <input type="password" name="pw" placeholder="비밀번호" id="pw" autofocus required><br>
+      <input type="password" name="pwch" placeholder="비밀번호 확인" id="pwch" autofocus required ><br>
+
+      <input type="text" name="name" placeholder="이름" id="name" autofocus required ><br>
+      <input type="tel" name="phone" placeholder="전화번호 11자리" id="phone"  autofocus required><br>
+      <input type="mail" name="mail" placeholder="Email" id="mail" autofocus required><br>
+      <input type="text" name="birth" placeholder="생년월일 6자리" id="birth" autofocus required><br>
+
+      성별<input type="radio" name="sex" value="male">남자
+          <input type="radio" name="sex" value="female">여자<br>
+
+      <input type="submit" name="gaipcheck" id="gaipcheck" value="가입하기" onclick="Gaipcheck()" >
+    </fieldset>
+
+  </body>
+  <script src="search.js" charset="utf-8"></script>
+</html>
